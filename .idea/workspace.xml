@@ -4,10 +4,23 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="move iterators creating to factory">
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" afterDir="false" />
+    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="add actor classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYAnti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYAnti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorY.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldSimpleTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,9 +171,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Tictac" />
+        <item itemvalue="JUnit.TictacFieldIteratorsTest" />
         <item itemvalue="JUnit.TictacLogicSimpleTest.horizontalWinner" />
         <item itemvalue="JUnit.TictacLogicSimpleTest" />
-        <item itemvalue="JUnit.TictacFieldIteratorsTest" />
         <item itemvalue="JUnit.TictacFieldIteratorsTest.iteratorX" />
       </list>
     </recent_temporary>
@@ -173,7 +186,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="32495000" />
+      <workItem from="1661434619901" duration="34405000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -217,7 +230,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661466905791</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="add actor classes">
+      <created>1661469093090</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1661469093090</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +261,7 @@
     <MESSAGE value="add diagonal iterators" />
     <MESSAGE value="implement logic for tic-tac-toe" />
     <MESSAGE value="move iterators creating to factory" />
-    <option name="LAST_COMMIT_MESSAGE" value="move iterators creating to factory" />
+    <MESSAGE value="add actor classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add actor classes" />
   </component>
 </project>

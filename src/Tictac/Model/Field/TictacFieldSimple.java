@@ -1,14 +1,17 @@
 package Tictac.Model.Field;
 
+import Tictac.Model.Actors.Actor;
+import Tictac.Model.Actors.NullActor;
+
 public class TictacFieldSimple implements TictacField {
-    private final String[][] cellArray;
+    private final Actor[][] cellArray;
 
     public TictacFieldSimple(int sizeX, int sizeY) {
-        this.cellArray = new String[sizeY][sizeX];
-        fillField(getEmptyDesignator());
+        this.cellArray = new Actor[sizeY][sizeX];
+        fillField(NullActor.getInstance());
     }
 
-    private void fillField(String filling) {
+    private void fillField(Actor filling) {
         for (int y = 0; y < getSizeY(); y++) {
             for (int x = 0; x < getSizeX(); x++) {
                 setCell(x, y, filling);
@@ -27,17 +30,12 @@ public class TictacFieldSimple implements TictacField {
     }
 
     @Override
-    public String getEmptyDesignator() {
-        return ".";
-    }
-
-    @Override
-    public String getCell(int x, int y) {
+    public Actor getCell(int x, int y) {
         return cellArray[y][x];
     }
 
     @Override
-    public void setCell(int x, int y, String cell) {
+    public void setCell(int x, int y, Actor cell) {
         cellArray[y][x] = cell;
     }
 }

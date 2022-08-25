@@ -1,9 +1,12 @@
 package Tictac.Model.Field;
 
+import Tictac.Model.Actors.Actor;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class TictacFieldSimpleTest {
+    private final Actor aX = new Actor("X");
+    private final Actor aO = new Actor("O");
 
     @Test
     public void getSizeXAndY() {
@@ -17,10 +20,10 @@ public class TictacFieldSimpleTest {
     public void getAndSetCell() {
         TictacField field = new TictacFieldSimple(3, 5);
 
-        field.setCell(0, 0, "X");
-        field.setCell(2, 4, "O");
+        field.setCell(0, 0, aX);
+        field.setCell(2, 4, aO);
 
-        assertEquals("X", field.getCell(0, 0));
-        assertEquals("O", field.getCell(2, 4));
+        assertEquals(aX, field.getCell(0, 0));
+        assertEquals(aO, field.getCell(2, 4));
     }
 }

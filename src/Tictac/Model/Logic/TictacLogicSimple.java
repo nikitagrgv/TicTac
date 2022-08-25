@@ -1,5 +1,7 @@
 package Tictac.Model.Logic;
 
+import Tictac.Model.Actors.NullActor;
+import Tictac.Model.Actors.Actor;
 import Tictac.Model.Field.TictacField;
 import Tictac.Model.Field.TictacFieldFactory;
 
@@ -21,12 +23,12 @@ public class TictacLogicSimple implements TictacLogic {
 
     @Override
     public boolean hasWinner() {
-        return !getWinner().equals(field.getEmptyDesignator());
+        return !getWinner().equals(NullActor.getInstance());
     }
 
     @Override
-    public String getWinner() {
-        List<Iterator<String>> linesIterators = new ArrayList<>();
+    public Actor getWinner() {
+        List<Iterator<Actor>> linesIterators = new ArrayList<>();
 
         // add horizontal lines
         for (int y = 0; y < field.getSizeY(); y++) {
@@ -54,18 +56,18 @@ public class TictacLogicSimple implements TictacLogic {
         }
 
         for (var line : linesIterators) {
-            String winner = getLineWinner(line);
+            Actor winner = getLineWinner(line);
 
-            if (!winner.equals(field.getEmptyDesignator())) {
+            if (!winner.equals(NullActor.getInstance())) {
                 return winner;
             }
         }
 
-        return field.getEmptyDesignator();
+        return NullActor.getInstance();
     }
 
-    private String getLineWinner(Iterator<String> it) {
-        Set<String> cellPlayers = new HashSet<>();
+    private Actor getLineWinner(Iterator<Actor> it) {
+        Set<Actor> cellPlayers = new HashSet<>();
         while (it.hasNext()) {
             cellPlayers.add(it.next());
         }
@@ -74,6 +76,6 @@ public class TictacLogicSimple implements TictacLogic {
             return cellPlayers.iterator().next();
         }
 
-        return field.getEmptyDesignator();
+        return NullActor.getInstance();
     }
 }

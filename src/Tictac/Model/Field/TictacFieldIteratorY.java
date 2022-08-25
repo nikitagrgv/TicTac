@@ -1,8 +1,10 @@
 package Tictac.Model.Field;
 
+import Tictac.Model.Actors.Actor;
+
 import java.util.Iterator;
 
-public class TictacFieldIteratorY implements Iterator<String> {
+public class TictacFieldIteratorY implements Iterator<Actor> {
     private final TictacField field;
     private int currentIndex = 0;
     private final int xPos;
@@ -19,7 +21,7 @@ public class TictacFieldIteratorY implements Iterator<String> {
     }
 
     @Override
-    public String next() {
+    public Actor next() {
         if (!hasNext())
             throw new java.util.NoSuchElementException();
 

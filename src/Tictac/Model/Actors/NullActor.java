@@ -1,8 +1,15 @@
 package Tictac.Model.Actors;
 
 public class NullActor extends Actor {
-    NullActor() {
+    private static final NullActor instance = new NullActor();
+
+    private NullActor() {
         super(".");
+    }
+
+    public static NullActor getInstance()
+    {
+        return instance;
     }
 
     @Override

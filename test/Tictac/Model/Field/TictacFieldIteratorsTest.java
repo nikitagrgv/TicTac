@@ -1,29 +1,34 @@
 package Tictac.Model.Field;
 
+import Tictac.Model.Actors.Actor;
 import org.junit.Test;
 
 import java.util.Iterator;
 
 import static org.junit.Assert.*;
 
-
 public class TictacFieldIteratorsTest {
     private final TictacFieldFactory factory = new TictacFieldSimpleFactory();
+
+    private final Actor aX = new Actor("X");
+    private final Actor aO = new Actor("O");
+    private final Actor aZ = new Actor("Z");
+    private final Actor aV = new Actor("V");
 
     @Test
     public void iteratorX() {
         TictacField field = new TictacFieldSimple(3, 4);
 
-        field.setCell(0, 1, "X");
-        field.setCell(1, 1, "O");
-        field.setCell(2, 1, "Z");
-        Iterator<String> it = factory.getIteratorX(field, 1);
+        field.setCell(0, 1, aX);
+        field.setCell(1, 1, aO);
+        field.setCell(2, 1, aZ);
+        var it = factory.getIteratorX(field, 1);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertTrue(it.hasNext());
-        assertEquals("Z", it.next());
+        assertEquals(aZ, it.next());
         assertFalse(it.hasNext());
 
         try {
@@ -36,19 +41,19 @@ public class TictacFieldIteratorsTest {
     public void iteratorY() {
         TictacField field = new TictacFieldSimple(3, 4);
 
-        field.setCell(1, 0, "X");
-        field.setCell(1, 1, "O");
-        field.setCell(1, 2, "Z");
-        field.setCell(1, 3, "V");
-        Iterator<String> it = factory.getIteratorY(field, 1);
+        field.setCell(1, 0, aX);
+        field.setCell(1, 1, aO);
+        field.setCell(1, 2, aZ);
+        field.setCell(1, 3, aV);
+        var it = factory.getIteratorY(field, 1);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertTrue(it.hasNext());
-        assertEquals("Z", it.next());
+        assertEquals(aZ, it.next());
         assertTrue(it.hasNext());
-        assertEquals("V", it.next());
+        assertEquals(aV, it.next());
         assertFalse(it.hasNext());
 
         try {
@@ -66,13 +71,13 @@ public class TictacFieldIteratorsTest {
         // ...
         // ...
 
-        field.setCell(1, 0, "X");
-        field.setCell(2, 1, "O");
-        Iterator<String> it = factory.getIteratorXYMain(field, 1, 0);
+        field.setCell(1, 0, aX);
+        field.setCell(2, 1, aO);
+        var it = factory.getIteratorXYMain(field, 1, 0);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertFalse(it.hasNext());
 
         try {
@@ -90,13 +95,13 @@ public class TictacFieldIteratorsTest {
         // X..
         // .O.
 
-        field.setCell(0, 2, "X");
-        field.setCell(1, 3, "O");
-        Iterator<String> it = factory.getIteratorXYMain(field, 0, 2);
+        field.setCell(0, 2, aX);
+        field.setCell(1, 3, aO);
+        var it = factory.getIteratorXYMain(field, 0, 2);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertFalse(it.hasNext());
 
         try {
@@ -114,13 +119,13 @@ public class TictacFieldIteratorsTest {
         // ..O
         // .X.
 
-        field.setCell(1, 3, "X");
-        field.setCell(2, 2, "O");
-        Iterator<String> it = factory.getIteratorXYAnti(field, 1, 3);
+        field.setCell(1, 3, aX);
+        field.setCell(2, 2, aO);
+        var it = factory.getIteratorXYAnti(field, 1, 3);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertFalse(it.hasNext());
 
         try {
@@ -138,13 +143,13 @@ public class TictacFieldIteratorsTest {
         // ...
         // ...
 
-        field.setCell(0, 1, "X");
-        field.setCell(1, 0, "O");
-        Iterator<String> it = factory.getIteratorXYAnti(field, 0, 1);
+        field.setCell(0, 1, aX);
+        field.setCell(1, 0, aO);
+        var it = factory.getIteratorXYAnti(field, 0, 1);
 
-        assertEquals("X", it.next());
+        assertEquals(aX, it.next());
         assertTrue(it.hasNext());
-        assertEquals("O", it.next());
+        assertEquals(aO, it.next());
         assertFalse(it.hasNext());
 
         try {

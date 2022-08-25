@@ -1,14 +1,16 @@
 package Tictac.Model.Field;
 
+import Tictac.Model.Actors.Actor;
+
 import java.util.Iterator;
 
 public interface TictacFieldFactory {
     TictacField getTictacField(int sizeX, int sizeY);
-    Iterator<String> getIteratorX(TictacField field, int yPos);
+    Iterator<Actor> getIteratorX(TictacField field, int yPos);
 
-    Iterator<String> getIteratorY(TictacField field, int xPos);
+    Iterator<Actor> getIteratorY(TictacField field, int xPos);
 
-    Iterator<String> getIteratorXYMain(TictacField field, int xPos, int yPos);
+    Iterator<Actor> getIteratorXYMain(TictacField field, int xPos, int yPos);
 
-    Iterator<String> getIteratorXYAnti(TictacField field, int xPos, int yPos);
+    Iterator<Actor> getIteratorXYAnti(TictacField field, int xPos, int yPos);
 }
