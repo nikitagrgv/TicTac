@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="add iterators for TictacField">
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorX.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYAnti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorY.java" afterDir="false" />
+    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="implement logic for tic-tac-toe">
       <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogic.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/TictacField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/TictacFieldImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/TictacFieldImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,27 +78,11 @@
       <recent name="Tictac.Model.Field" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TictacFieldIteratorsTest">
+  <component name="RunManager" selected="JUnit.All in Tictac">
     <configuration name="All in Tictac" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TictacFieldImplTest.iteratorX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tictac" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Tictac.Model.Field.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Tictac.Model.Field" />
-      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Field.TictacFieldImplTest" />
-      <option name="METHOD_NAME" value="iteratorX" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -140,17 +118,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TictacLogicSimpleTest.noWinners" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TictacLogicSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tictac.Model.Field.*" />
+          <option name="PATTERN" value="Tictac.Model.Logic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tictac.Model.Logic" />
       <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.TictacLogicSimpleTest" />
-      <option name="METHOD_NAME" value="noWinners" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TictacLogicSimpleTest.horizontalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tictac" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Tictac.Model.Logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Tictac.Model.Logic" />
+      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.TictacLogicSimpleTest" />
+      <option name="METHOD_NAME" value="horizontalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -158,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TictacFieldIteratorsTest" />
         <item itemvalue="JUnit.All in Tictac" />
+        <item itemvalue="JUnit.TictacLogicSimpleTest.horizontalWinner" />
+        <item itemvalue="JUnit.TictacLogicSimpleTest" />
+        <item itemvalue="JUnit.TictacFieldIteratorsTest" />
         <item itemvalue="JUnit.TictacFieldIteratorsTest.iteratorX" />
-        <item itemvalue="JUnit.TictacLogicSimpleTest.noWinners" />
-        <item itemvalue="JUnit.TictacFieldImplTest.iteratorX" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +167,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="19203000" />
+      <workItem from="1661434619901" duration="26563000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -197,7 +190,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661448100659</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add diagonal iterators">
+      <created>1661455808252</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1661455808252</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +218,8 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="add TictacField interface, implementation and tests" />
     <MESSAGE value="add iterators for TictacField" />
-    <option name="LAST_COMMIT_MESSAGE" value="add iterators for TictacField" />
+    <MESSAGE value="add diagonal iterators" />
+    <MESSAGE value="implement logic for tic-tac-toe" />
+    <option name="LAST_COMMIT_MESSAGE" value="implement logic for tic-tac-toe" />
   </component>
 </project>

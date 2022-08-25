@@ -7,6 +7,15 @@ public class TictacFieldImpl implements TictacField {
 
     public TictacFieldImpl(int sizeX, int sizeY) {
         this.cellArray = new String[sizeY][sizeX];
+        fillField(getEmptyDesignator());
+    }
+
+    private void fillField(String filling) {
+        for (int y = 0; y < getSizeY(); y++) {
+            for (int x = 0; x < getSizeX(); x++) {
+                setCell(x, y, filling);
+            }
+        }
     }
 
     @Override
@@ -17,6 +26,11 @@ public class TictacFieldImpl implements TictacField {
     @Override
     public int getSizeY() {
         return cellArray.length;
+    }
+
+    @Override
+    public String getEmptyDesignator() {
+        return ".";
     }
 
     @Override
