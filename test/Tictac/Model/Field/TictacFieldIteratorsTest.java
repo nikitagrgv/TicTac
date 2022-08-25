@@ -8,15 +8,16 @@ import static org.junit.Assert.*;
 
 
 public class TictacFieldIteratorsTest {
+    private final TictacFieldFactory factory = new TictacFieldSimpleFactory();
 
     @Test
     public void iteratorX() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         field.setCell(0, 1, "X");
         field.setCell(1, 1, "O");
         field.setCell(2, 1, "Z");
-        Iterator<String> it = field.iteratorX(1);
+        Iterator<String> it = factory.getIteratorX(field, 1);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());
@@ -33,13 +34,13 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorY() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         field.setCell(1, 0, "X");
         field.setCell(1, 1, "O");
         field.setCell(1, 2, "Z");
         field.setCell(1, 3, "V");
-        Iterator<String> it = field.iteratorY(1);
+        Iterator<String> it = factory.getIteratorY(field, 1);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());
@@ -58,7 +59,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYMainBoundedByX() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         // .X.
         // ..O
@@ -67,7 +68,7 @@ public class TictacFieldIteratorsTest {
 
         field.setCell(1, 0, "X");
         field.setCell(2, 1, "O");
-        Iterator<String> it = field.iteratorXYMain(1, 0);
+        Iterator<String> it = factory.getIteratorXYMain(field, 1, 0);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());
@@ -82,7 +83,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYMainBoundedByY() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         // ...
         // ...
@@ -91,7 +92,7 @@ public class TictacFieldIteratorsTest {
 
         field.setCell(0, 2, "X");
         field.setCell(1, 3, "O");
-        Iterator<String> it = field.iteratorXYMain(0, 2);
+        Iterator<String> it = factory.getIteratorXYMain(field, 0, 2);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());
@@ -106,7 +107,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYAntiBoundedByX() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         // ...
         // ...
@@ -115,7 +116,7 @@ public class TictacFieldIteratorsTest {
 
         field.setCell(1, 3, "X");
         field.setCell(2, 2, "O");
-        Iterator<String> it = field.iteratorXYAnti(1, 3);
+        Iterator<String> it = factory.getIteratorXYAnti(field, 1, 3);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());
@@ -130,7 +131,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYAntiBoundedByY() {
-        TictacField field = new TictacFieldImpl(3, 4);
+        TictacField field = new TictacFieldSimple(3, 4);
 
         // .O.
         // X..
@@ -139,7 +140,7 @@ public class TictacFieldIteratorsTest {
 
         field.setCell(0, 1, "X");
         field.setCell(1, 0, "O");
-        Iterator<String> it = field.iteratorXYAnti(0, 1);
+        Iterator<String> it = factory.getIteratorXYAnti(field, 0, 1);
 
         assertEquals("X", it.next());
         assertTrue(it.hasNext());

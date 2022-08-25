@@ -3,11 +3,11 @@ package Tictac.Model.Field;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class TictacFieldImplTest {
+public class TictacFieldSimpleTest {
 
     @Test
     public void getSizeXAndY() {
-        TictacField field = new TictacFieldImpl(3,5);
+        TictacField field = new TictacFieldSimple(3,5);
 
         assertEquals(3, field.getSizeX());
         assertEquals(5, field.getSizeY());
@@ -15,7 +15,7 @@ public class TictacFieldImplTest {
 
     @Test
     public void getAndSetCell() {
-        TictacField field = new TictacFieldImpl(3, 5);
+        TictacField field = new TictacFieldSimple(3, 5);
 
         field.setCell(0, 0, "X");
         field.setCell(2, 4, "O");

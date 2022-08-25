@@ -1,14 +1,17 @@
 package Tictac.Model.Logic;
 
 import Tictac.Model.Field.TictacField;
+import Tictac.Model.Field.TictacFieldFactory;
 
 import java.util.*;
 
 public class TictacLogicSimple implements TictacLogic {
     private TictacField field;
+    private final TictacFieldFactory factory;
 
-    public TictacLogicSimple(TictacField field) {
-        setField(field);
+    public TictacLogicSimple(TictacField field, TictacFieldFactory factory) {
+        this.field = field;
+        this.factory = factory;
     }
 
     @Override
@@ -27,12 +30,12 @@ public class TictacLogicSimple implements TictacLogic {
 
         // add horizontal lines
         for (int y = 0; y < field.getSizeY(); y++) {
-            linesIterators.add(field.iteratorX(y));
+            linesIterators.add(factory.getIteratorX(field, y));
         }
 
         // add vertical lines
         for (int x = 0; x < field.getSizeX(); x++) {
-            linesIterators.add(field.iteratorY(x));
+            linesIterators.add(factory.getIteratorY(field, x));
         }
 
         // add main diagonal lines
@@ -40,13 +43,13 @@ public class TictacLogicSimple implements TictacLogic {
 
         if (isColumnType) {
             for (int i = 0; i < field.getSizeY() - field.getSizeX(); i++) {
-                linesIterators.add(field.iteratorXYMain(0, i));
-                linesIterators.add(field.iteratorXYAnti(field.getSizeX() - 1, i));
+                linesIterators.add(factory.getIteratorXYMain(field, 0, i));
+                linesIterators.add(factory.getIteratorXYAnti(field, field.getSizeX() - 1, i));
             }
         } else {
             for (int i = 0; i < field.getSizeX() - field.getSizeY(); i++) {
-                linesIterators.add(field.iteratorXYMain(i, 0));
-                linesIterators.add(field.iteratorXYAnti(i, field.getSizeY() - 1));
+                linesIterators.add(factory.getIteratorXYMain(field, i, 0));
+                linesIterators.add(factory.getIteratorXYAnti(field, i, field.getSizeY() - 1));
             }
         }
 

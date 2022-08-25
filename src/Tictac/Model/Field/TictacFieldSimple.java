@@ -1,11 +1,9 @@
 package Tictac.Model.Field;
 
-import java.util.Iterator;
-
-public class TictacFieldImpl implements TictacField {
+public class TictacFieldSimple implements TictacField {
     private final String[][] cellArray;
 
-    public TictacFieldImpl(int sizeX, int sizeY) {
+    public TictacFieldSimple(int sizeX, int sizeY) {
         this.cellArray = new String[sizeY][sizeX];
         fillField(getEmptyDesignator());
     }
@@ -41,25 +39,5 @@ public class TictacFieldImpl implements TictacField {
     @Override
     public void setCell(int x, int y, String cell) {
         cellArray[y][x] = cell;
-    }
-
-    @Override
-    public Iterator<String> iteratorX(int yPos) {
-        return new TictacFieldIteratorX(this, yPos);
-    }
-
-    @Override
-    public Iterator<String> iteratorY(int xPos) {
-        return new TictacFieldIteratorY(this, xPos);
-    }
-
-    @Override
-    public Iterator<String> iteratorXYMain(int xPos, int yPos) {
-        return new TictacFieldIteratorXYMain(this, xPos, yPos);
-    }
-
-    @Override
-    public Iterator<String> iteratorXYAnti(int xPos, int yPos) {
-        return new TictacFieldIteratorXYAnti(this, xPos, yPos);
     }
 }
