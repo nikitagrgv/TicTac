@@ -1,4 +1,4 @@
-package Tictac.Model;
+package Tictac.Model.Field;
 
 import java.util.Iterator;
 
@@ -11,4 +11,6 @@ public interface TictacField {
 
     Iterator<String> iteratorX(int yPos);
     Iterator<String> iteratorY(int xPos);
+    Iterator<String> iteratorXYMain(int xPos, int yPos);
+    Iterator<String> iteratorXYAnti(int xPos, int yPos);
 }
