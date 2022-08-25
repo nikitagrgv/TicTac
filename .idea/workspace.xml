@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="move iterators creating to factory">
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldSimpleTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +21,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit4 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -179,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="30425000" />
+      <workItem from="1661434619901" duration="32495000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -216,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661462987874</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move iterators creating to factory">
+      <created>1661466905791</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1661466905791</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
