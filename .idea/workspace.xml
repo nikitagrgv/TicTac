@@ -4,13 +4,7 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="change implementation for players from String to Actor class">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="rename classes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +27,7 @@
   </component>
   <component name="JavaAutoRunManager">
     <enabled-run-configurations>
-      <run-configuration type="JUnit" name="TictacFieldIteratorsTest" />
+      <run-configuration type="JUnit" name="FieldIteratorsTest" />
     </enabled-run-configurations>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -96,7 +90,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TictacFieldIteratorsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FieldIteratorsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
@@ -105,13 +99,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tictac.Model.Field" />
-      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Field.TictacFieldIteratorsTest" />
+      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Field.FieldIteratorsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TictacFieldIteratorsTest.iteratorX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FieldIteratorsTest.iteratorX" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +114,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tictac.Model.Field" />
-      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Field.TictacFieldIteratorsTest" />
+      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Field.FieldIteratorsTest" />
       <option name="METHOD_NAME" value="iteratorX" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -176,7 +170,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="38454000" />
+      <workItem from="1661434619901" duration="38752000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -234,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661471013381</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="rename classes">
+      <created>1661475331294</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1661475331294</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,7 +261,8 @@
     <MESSAGE value="move iterators creating to factory" />
     <MESSAGE value="add actor classes" />
     <MESSAGE value="change implementation for players from String to Actor class" />
-    <option name="LAST_COMMIT_MESSAGE" value="change implementation for players from String to Actor class" />
+    <MESSAGE value="rename classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="rename classes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

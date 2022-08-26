@@ -8,7 +8,7 @@ import Tictac.Model.Field.FieldSimpleFactory;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-public class TictacLogicSimpleTest {
+public class LogicSimpleTest {
     FieldFactory factory = new FieldSimpleFactory();
     private final Actor aX = new Actor("X");
     private final Actor aO = new Actor("O");
@@ -16,7 +16,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void noWinners() {
         Field field = factory.getTictacField(5, 3);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         // XXXXO
         // XXO.O
@@ -39,7 +39,7 @@ public class TictacLogicSimpleTest {
         field.setCell(4, 2, aX); assertNoWinners(field, logic);
     }
 
-    private void assertNoWinners(Field field, TictacLogic logic) {
+    private void assertNoWinners(Field field, Logic logic) {
         assertFalse(logic.hasWinner());
         assertEquals(NullActor.getInstance(), logic.getWinner());
     }
@@ -47,7 +47,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void horizontalWinner() {
         Field field = factory.getTictacField(5, 3);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         field.setCell(0, 0, aX);
         field.setCell(1, 0, aX);
@@ -62,7 +62,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void verticalWinner() {
         Field field = factory.getTictacField(5, 3);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         field.setCell(0, 0, aX);
         field.setCell(0, 1, aX);
@@ -75,7 +75,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void diagonalWinnerMain1() {
         Field field = factory.getTictacField(5, 3);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         // .X...
         // ..X..
@@ -91,7 +91,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void diagonalWinnerAnti1() {
         Field field = factory.getTictacField(5, 3);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         // ...X.
         // ..X..
@@ -107,7 +107,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void diagonalWinnerMain2() {
         Field field = factory.getTictacField(3, 5);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         // ...
         // X..
@@ -126,7 +126,7 @@ public class TictacLogicSimpleTest {
     @Test
     public void diagonalWinnerAnti2() {
         Field field = factory.getTictacField(3, 5);
-        TictacLogic logic = new TictacLogicSimple(field, factory);
+        Logic logic = new LogicSimple(field, factory);
 
         // ...
         // ..X

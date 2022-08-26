@@ -7,12 +7,12 @@ import Tictac.Model.Field.FieldFactory;
 
 import java.util.*;
 
-public class TictacLogicSimple implements TictacLogic {
+public class LogicSimple implements Logic {
     private Field field;
     private final FieldFactory factory;
     private final NullActor nullActor = NullActor.getInstance();
 
-    public TictacLogicSimple(Field field, FieldFactory factory) {
+    public LogicSimple(Field field, FieldFactory factory) {
         this.field = field;
         this.factory = factory;
     }
