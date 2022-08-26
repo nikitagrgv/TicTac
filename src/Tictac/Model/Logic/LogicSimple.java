@@ -10,16 +10,11 @@ import java.util.*;
 public class LogicSimple implements Logic {
     private final FieldFactory factory;
     private final NullActor nullActor = NullActor.getInstance();
-    private Field field;
+    private final Field field;
 
     public LogicSimple(Field field, FieldFactory factory) {
         this.field = field;
         this.factory = factory;
-    }
-
-    @Override
-    public void setField(Field field) {
-        this.field = field;
     }
 
     @Override

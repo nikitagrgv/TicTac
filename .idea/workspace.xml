@@ -4,7 +4,11 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="rename classes" />
+    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="delete Logic.setField method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/LogicSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/LogicSimple.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +32,7 @@
   <component name="JavaAutoRunManager">
     <enabled-run-configurations>
       <run-configuration type="JUnit" name="FieldIteratorsTest" />
+      <run-configuration type="JUnit" name="All in Tictac" />
     </enabled-run-configurations>
   </component>
   <component name="MarkdownSettingsMigration">
@@ -170,7 +175,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="38752000" />
+      <workItem from="1661434619901" duration="39605000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -235,7 +240,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661475331294</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="rename classes (2)">
+      <created>1661475529879</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1661475529879</updated>
+    </task>
+    <task id="LOCAL-00011" summary="some code cleaning">
+      <created>1661475865276</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1661475865276</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +268,36 @@
             <State />
           </value>
         </entry>
+        <entry key="f3046d8f-6cb5-40f1-90e4-42f0f0ebda1b">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:C:/Users/nekita/IdeaProjects/Tictac/src" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="f3046d8f-6cb5-40f1-90e4-42f0f0ebda1b" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>
@@ -262,10 +311,16 @@
     <MESSAGE value="add actor classes" />
     <MESSAGE value="change implementation for players from String to Actor class" />
     <MESSAGE value="rename classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="rename classes" />
+    <MESSAGE value="rename classes (2)" />
+    <MESSAGE value="some code cleaning" />
+    <MESSAGE value="delete Logic.setField method" />
+    <option name="LAST_COMMIT_MESSAGE" value="delete Logic.setField method" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Tictac$All_in_Tictac.ic" NAME="All in Tictac Coverage Results" MODIFIED="1661476055395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
