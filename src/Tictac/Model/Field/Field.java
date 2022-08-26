@@ -2,7 +2,7 @@ package Tictac.Model.Field;
 
 import Tictac.Model.Actors.Actor;
 
-public interface TictacField {
+public interface Field {
     int getSizeX();
     int getSizeY();
 

@@ -4,22 +4,11 @@
     <option name="ANALYZE_TEST_SOURCES" value="false" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="add actor classes">
+    <list default="true" id="e6ae2187-6074-409c-90c8-f0e80e40707c" name="Changes" comment="change implementation for players from String to Actor class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/Actor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Actors/NullActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacField.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYAnti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYAnti.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorXYMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorY.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldIteratorY.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimple.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Field/TictacFieldSimpleFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tictac/Model/Logic/TictacLogicSimple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldIteratorsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Field/TictacFieldSimpleTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/test/Tictac/Model/Logic/TictacLogicSimpleTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,7 +61,8 @@
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,7 +100,7 @@
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tictac.Model.Field.*" />
+          <option name="PATTERN" value="Tictac.Model.Field.Iterators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -125,7 +115,7 @@
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Tictac.Model.Field.*" />
+          <option name="PATTERN" value="Tictac.Model.Field.Iterators.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,7 +176,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1661434616135</updated>
-      <workItem from="1661434619901" duration="34405000" />
+      <workItem from="1661434619901" duration="38454000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1661435086977</created>
@@ -237,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661469093090</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="change implementation for players from String to Actor class">
+      <created>1661471013381</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1661471013381</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,6 +259,11 @@
     <MESSAGE value="implement logic for tic-tac-toe" />
     <MESSAGE value="move iterators creating to factory" />
     <MESSAGE value="add actor classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add actor classes" />
+    <MESSAGE value="change implementation for players from String to Actor class" />
+    <option name="LAST_COMMIT_MESSAGE" value="change implementation for players from String to Actor class" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,15 +1,16 @@
-package Tictac.Model.Field;
+package Tictac.Model.Field.Iterators;
 
 import Tictac.Model.Actors.Actor;
+import Tictac.Model.Field.Field;
 
 import java.util.Iterator;
 
-public class TictacFieldIteratorXYAnti implements Iterator<Actor> {
-    private final TictacField field;
+public class FieldIteratorXYMain implements Iterator<Actor> {
+    private final Field field;
     private int xPos;
     private int yPos;
 
-    public TictacFieldIteratorXYAnti(TictacField field, int xPos, int yPos) {
+    public FieldIteratorXYMain(Field field, int xPos, int yPos) {
         this.field = field;
         this.xPos = xPos;
         this.yPos = yPos;
@@ -17,7 +18,7 @@ public class TictacFieldIteratorXYAnti implements Iterator<Actor> {
 
     @Override
     public boolean hasNext() {
-        return xPos < field.getSizeX() && yPos >= 0;
+        return xPos < field.getSizeX() && yPos < field.getSizeY();
     }
 
     @Override
@@ -25,6 +26,6 @@ public class TictacFieldIteratorXYAnti implements Iterator<Actor> {
         if (!hasNext())
             throw new java.util.NoSuchElementException();
 
-        return field.getCell(xPos++, yPos--);
+        return field.getCell(xPos++, yPos++);
     }
 }

@@ -1,15 +1,16 @@
-package Tictac.Model.Field;
+package Tictac.Model.Field.Iterators;
 
 import Tictac.Model.Actors.Actor;
+import Tictac.Model.Field.Field;
 
 import java.util.Iterator;
 
-public class TictacFieldIteratorY implements Iterator<Actor> {
-    private final TictacField field;
+public class FieldIteratorY implements Iterator<Actor> {
+    private final Field field;
     private int currentIndex = 0;
     private final int xPos;
 
-    public TictacFieldIteratorY(TictacField field, int xPos)
+    public FieldIteratorY(Field field, int xPos)
     {
         this.field = field;
         this.xPos = xPos;

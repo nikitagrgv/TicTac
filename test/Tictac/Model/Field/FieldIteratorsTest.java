@@ -3,12 +3,10 @@ package Tictac.Model.Field;
 import Tictac.Model.Actors.Actor;
 import org.junit.Test;
 
-import java.util.Iterator;
-
 import static org.junit.Assert.*;
 
-public class TictacFieldIteratorsTest {
-    private final TictacFieldFactory factory = new TictacFieldSimpleFactory();
+public class FieldIteratorsTest {
+    private final FieldFactory factory = new FieldSimpleFactory();
 
     private final Actor aX = new Actor("X");
     private final Actor aO = new Actor("O");
@@ -17,7 +15,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorX() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         field.setCell(0, 1, aX);
         field.setCell(1, 1, aO);
@@ -39,7 +37,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorY() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         field.setCell(1, 0, aX);
         field.setCell(1, 1, aO);
@@ -64,7 +62,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYMainBoundedByX() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         // .X.
         // ..O
@@ -88,7 +86,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYMainBoundedByY() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         // ...
         // ...
@@ -112,7 +110,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYAntiBoundedByX() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         // ...
         // ...
@@ -136,7 +134,7 @@ public class TictacFieldIteratorsTest {
 
     @Test
     public void iteratorXYAntiBoundedByY() {
-        TictacField field = new TictacFieldSimple(3, 4);
+        Field field = new FieldSimple(3, 4);
 
         // .O.
         // X..

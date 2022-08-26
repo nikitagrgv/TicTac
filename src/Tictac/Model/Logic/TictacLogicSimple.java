@@ -2,45 +2,63 @@ package Tictac.Model.Logic;
 
 import Tictac.Model.Actors.NullActor;
 import Tictac.Model.Actors.Actor;
-import Tictac.Model.Field.TictacField;
-import Tictac.Model.Field.TictacFieldFactory;
+import Tictac.Model.Field.Field;
+import Tictac.Model.Field.FieldFactory;
 
 import java.util.*;
 
 public class TictacLogicSimple implements TictacLogic {
-    private TictacField field;
-    private final TictacFieldFactory factory;
+    private Field field;
+    private final FieldFactory factory;
+    private final NullActor nullActor = NullActor.getInstance();
 
-    public TictacLogicSimple(TictacField field, TictacFieldFactory factory) {
+    public TictacLogicSimple(Field field, FieldFactory factory) {
         this.field = field;
         this.factory = factory;
     }
 
     @Override
-    public void setField(TictacField field) {
+    public void setField(Field field) {
         this.field = field;
     }
 
     @Override
     public boolean hasWinner() {
-        return !getWinner().equals(NullActor.getInstance());
+        return !getWinner().equals(nullActor);
     }
 
     @Override
     public Actor getWinner() {
         List<Iterator<Actor>> linesIterators = new ArrayList<>();
 
-        // add horizontal lines
+        addHorizontalLines(linesIterators);
+        addVerticalLines(linesIterators);
+        addDiagonalLines(linesIterators);
+
+        for (var line : linesIterators) {
+            Actor winner = getLineWinner(line);
+
+            if (!winner.equals(nullActor)) {
+                return winner;
+            }
+        }
+
+        return nullActor;
+    }
+
+    private void addHorizontalLines(List<Iterator<Actor>> linesIterators) {
         for (int y = 0; y < field.getSizeY(); y++) {
             linesIterators.add(factory.getIteratorX(field, y));
         }
+    }
 
-        // add vertical lines
+    private void addVerticalLines(List<Iterator<Actor>> linesIterators) {
         for (int x = 0; x < field.getSizeX(); x++) {
             linesIterators.add(factory.getIteratorY(field, x));
         }
+    }
 
-        // add main diagonal lines
+    private void addDiagonalLines(List<Iterator<Actor>> linesIterators) {
         boolean isColumnType = field.getSizeY() > field.getSizeX();
 
         if (isColumnType) {
@@ -54,16 +72,6 @@ public class TictacLogicSimple implements TictacLogic {
                 linesIterators.add(factory.getIteratorXYAnti(field, i, field.getSizeY() - 1));
             }
         }
-
-        for (var line : linesIterators) {
-            Actor winner = getLineWinner(line);
-
-            if (!winner.equals(NullActor.getInstance())) {
-                return winner;
-            }
-        }
-
-        return NullActor.getInstance();
     }
 
     private Actor getLineWinner(Iterator<Actor> it) {
@@ -76,6 +84,6 @@ public class TictacLogicSimple implements TictacLogic {
             return cellPlayers.iterator().next();
         }
 
-        return NullActor.getInstance();
+        return nullActor;
     }
 }

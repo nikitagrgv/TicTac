@@ -3,10 +3,10 @@ package Tictac.Model.Field;
 import Tictac.Model.Actors.Actor;
 import Tictac.Model.Actors.NullActor;
 
-public class TictacFieldSimple implements TictacField {
+public class FieldSimple implements Field {
     private final Actor[][] cellArray;
 
-    public TictacFieldSimple(int sizeX, int sizeY) {
+    public FieldSimple(int sizeX, int sizeY) {
         this.cellArray = new Actor[sizeY][sizeX];
         fillField(NullActor.getInstance());
     }
