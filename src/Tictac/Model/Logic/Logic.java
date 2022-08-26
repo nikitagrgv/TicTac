@@ -7,5 +7,6 @@ public interface Logic {
     void setField(Field field);
 
     boolean hasWinner();
+
     Actor getWinner();
 }

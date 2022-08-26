@@ -7,11 +7,10 @@ import java.util.Iterator;
 
 public class FieldIteratorX implements Iterator<Actor> {
     private final Field field;
-    private int currentIndex = 0;
     private final int yPos;
+    private int currentIndex = 0;
 
-    public FieldIteratorX(Field field, int yPos)
-    {
+    public FieldIteratorX(Field field, int yPos) {
         this.field = field;
         this.yPos = yPos;
     }

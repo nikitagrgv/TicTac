@@ -7,8 +7,7 @@ public class NullActor extends Actor {
         super(".");
     }
 
-    public static NullActor getInstance()
-    {
+    public static NullActor getInstance() {
         return instance;
     }
 

@@ -121,7 +121,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TictacLogicSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicSimpleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
@@ -130,13 +130,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tictac.Model.Logic" />
-      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.TictacLogicSimpleTest" />
+      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.LogicSimpleTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TictacLogicSimpleTest.horizontalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="LogicSimpleTest.horizontalWinner" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tictac" />
       <extension name="coverage">
         <pattern>
@@ -145,7 +145,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Tictac.Model.Logic" />
-      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.TictacLogicSimpleTest" />
+      <option name="MAIN_CLASS_NAME" value="Tictac.Model.Logic.LogicSimpleTest" />
       <option name="METHOD_NAME" value="horizontalWinner" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">

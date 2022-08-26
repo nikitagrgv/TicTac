@@ -7,11 +7,10 @@ import java.util.Iterator;
 
 public class FieldIteratorY implements Iterator<Actor> {
     private final Field field;
-    private int currentIndex = 0;
     private final int xPos;
+    private int currentIndex = 0;
 
-    public FieldIteratorY(Field field, int xPos)
-    {
+    public FieldIteratorY(Field field, int xPos) {
         this.field = field;
         this.xPos = xPos;
     }

@@ -1,16 +1,16 @@
 package Tictac.Model.Logic;
 
-import Tictac.Model.Actors.NullActor;
 import Tictac.Model.Actors.Actor;
+import Tictac.Model.Actors.NullActor;
 import Tictac.Model.Field.Field;
 import Tictac.Model.Field.FieldFactory;
 
 import java.util.*;
 
 public class LogicSimple implements Logic {
-    private Field field;
     private final FieldFactory factory;
     private final NullActor nullActor = NullActor.getInstance();
+    private Field field;
 
     public LogicSimple(Field field, FieldFactory factory) {
         this.field = field;
